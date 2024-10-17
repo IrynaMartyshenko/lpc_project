@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('pic.webp'); 
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #5B4C36; 
+}
+
+.home-button-container {
+  margin: 20px; 
+  text-align: left; 
+}
+
+.back-to-mainp {
+  width: 65px;
+  height: 65px;
+  border: none;
+  background-color: #4d4d4d; 
+  border-radius: 50%; 
+  color: white; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.back-to-mainp:hover {
+  background-color: #3b3b3b; 
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.faq-container {
+  text-align: start;
+  background-color: rgba(255, 255, 255, 0.95); 
+  width: 50vw;
+  margin: 30px auto; 
+  border-radius: 10px; 
+  padding: 30px; 
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease; 
+}
+
+.faq-container:hover {
+  transform: scale(1.02); 
+}
+
+.title-faq {
+  padding: 20px 0;
+  font-size: 36px; 
+  text-align: center; 
+  color: #7A5C2E; 
+}
+
+.welcome-text {
+  font-size: 18px; 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+}
+
+.questions-answers {
+  border-top: 2px solid #7A5C2E; 
+  padding-top: 20px; 
+}
+
+.question {
+  font-size: 26px; 
+  margin: 15px 0; 
+  color: #5B4C36; 
+  position: relative;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+.answer {
+  font-size: 20px; 
+  margin-bottom: 20px; 
+  line-height: 1.5; 
+  background-color: #f9f9f9; 
+  border-left: 4px solid #7A5C2E; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+}
+
+.question-icon {
+  width: 25px;
+  margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .home-button-container {
+    text-align: center; 
+    margin-bottom: 10px; 
+  }
+  
+  .back-to-mainp {
+    padding: 10px 20px; 
+    font-size: 14px; 
+  }
+
+  .faq-container {
+    padding: 10px; 
+  }
+
+  .title-faq {
+    font-size: 22px; 
+  }
+
+  .welcome-text {
+    font-size: 12px; 
+    margin-bottom: 10px; 
+  }
+
+  .questions-answers {
+    margin-bottom: 10px; 
+  }
+
+  .question {
+    font-size: 16px; 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 5px;
+  }
+
+  .answer {
+    font-size: 14px; 
+    margin-bottom: 10px;
+  }
+}

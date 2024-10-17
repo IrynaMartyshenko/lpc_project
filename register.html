@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="register-styles.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <button class="back-to-mainp" onclick="window.location.href='index.html'">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+      <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+      <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+      </svg>
+    </button>
+  </div>
+  <div class="registration-page">
+    <div class="registration-form-container">
+      <h3 class="sign-up-title">Sign up</h3>
+
+      <form action="#" id="registrationForm">
+        <div class="registration-form">
+          <label class="registration-label">Name</label>
+          <input type="text" class="input-info" placeholder="Enter Your Name">
+          
+          <label class="registration-label">Surname</label>
+          <input type="text" class="input-info" placeholder="Enter Your Surname">
+          
+          <label class="registration-label">Birthday Date</label>
+          <input type="date" class="input-info">
+          
+          <label class="registration-label">Email</label>
+          <input type="email" class="input-info" placeholder="Enter Your Email">
+
+          <label class="registration-label">Password</label>
+          <input type="password" class="input-info" placeholder="Create Your Password">
+          
+          <label class="registration-label"> Sex</label>
+          <label>
+            <input type="radio" name="gender" value="male" required>
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female">
+            Female
+          </label>
+
+
+          <label class="registration-label">Group</label>
+          <select class="input-info">
+            <option value="">Choose a group</option>
+            <option value="IA-31">IA-31</option>
+            <option value="IA-32">IA-32</option>
+            <option value="IA-33">IA-33</option>
+            <option value="IA-34">IA-34</option>
+            <option value="IA-35">IA-35</option>
+          </select>
+          
+          <label class="registration-label">Upload File</label>
+          <input type="file" accept=".pdf, .doc,.docx" class="input-info">
+          
+          <button type="submit" class="submit-button" onclick="validateForm(event)">Sign Up</button>
+        </div>
+      </form>
+    </div>
+    <div class="login-link">
+      <span>Already have an account?</span>
+      <a href="login.html" class="lpage-link">Login</a>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="admin-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <button class="back-to-mainp" onclick="window.location.href='index.html'">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+      <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+      <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+      </svg>
+    </button>
+  </div>
+  <div class="admin-page-title">
+    <h3>Admin Page</h3>
+  </div>
+  <div class="table-for-products">
+    <div class="table-responsive">
+    <table>
+      <tr>
+        <th>№</th>
+        <th>Name</th>
+        <th>EUR</th>
+        <th>Photo</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Coffee</td>
+        <td>40.00</td>
+        <td>
+          <img src="coffee-beans.jpg" alt="coffe-beans" class="table-pic">
+        </td>
+        <td>
+          <button class="action-button view"><i class="fa fa-eye"></i></button>
+          <button class="action-button edit"><i class="fa fa-edit"></i></button>
+          <button class="action-button delete"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Flowers</td>
+        <td>15.00</td>
+        <td>
+          <img src="flowers.jpg" alt="flowers" class="table-pic">
+        </td>
+        <td>
+          <button class="action-button view"><i class="fa fa-eye"></i></button>
+          <button class="action-button edit"><i class="fa fa-edit"></i></button>
+          <button class="action-button delete"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Furniture</td>
+        <td>350.00</td>
+        <td>
+          <img src="furniture.jpg" alt="furniture" class="table-pic">
+        </td>
+        <td>
+          <button class="action-button view"><i class="fa fa-eye"></i></button>
+          <button class="action-button edit"><i class="fa fa-edit"></i></button>
+          <button class="action-button delete"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Coffee cups</td>
+        <td>60.00</td>
+        <td>
+          <img src="coffee-cups.jpg" alt="coffee-cups" class="table-pic">
+        </td>
+        <td>
+          <button class="action-button view"><i class="fa fa-eye"></i></button>
+          <button class="action-button edit"><i class="fa fa-edit"></i></button>
+          <button class="action-button delete"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Pendant Lights</td>
+        <td>1350.30</td>
+        <td>
+          <img src="lights.png" alt="pendant-lights" class="table-pic">
+        </td>
+        <td>
+          <button class="action-button view"><i class="fa fa-eye"></i></button>
+          <button class="action-button edit"><i class="fa fa-edit"></i></button>
+          <button class="action-button delete"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('background-pic.webp');
+  background-size: auto; 
+  font-family: 'Open Sans', sans-serif; 
+  color: #333; 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  padding: 0 20px; 
+  background-color: rgb(242, 242, 242, 0.8);
+}
+
+.content {
+  height: 83vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px; 
+  padding-top: 0;
+  overflow: hidden; 
+}
+
+footer {
+  height:12vh;
+  width: 100%;
+  background-color: rgba(162, 124, 66, 0.9); 
+  color:#f2f2f2;; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; 
+
+}
+
+
+
+.project { 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  color: #7A5C2E; 
+  margin-left: 40px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin-right: 30px; 
+  font-size: 25px; 
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #7A5C2E; 
+  transition: color 0.3s; 
+}
+
+.navbar a:hover {
+  color:  #a27c42;; 
+}
+
+.news, .about-the-project {
+  width: 500px;
+  max-height: 650px; 
+  margin: 0 20px;
+  overflow-y: auto; 
+  font-size: 18px; 
+  line-height: 1.6; 
+  padding: 15px; 
+  background-color: rgb(242, 242, 242, 0.8);; 
+  border-radius: 8.5px; 
+  box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.news ul, .about-the-project ul {
+  margin-left: 10px;
+}
+
+.slideshow-container {
+  position: relative;
+  border-radius: 5px; 
+  overflow: hidden; 
+}
+
+.mySlides img {
+  height: 650px;
+  width: 500px; 
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: #f2f2f2;;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  position: absolute;
+  top: 8px; 
+  left: 16px; 
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+.contact-us {
+  margin-bottom: 10px;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #333; 
+}
+
+.footer-icon {
+  color: #f2f2f2;;
+  font-size: 24px;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  color: #ffd700; 
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #7A5C2E transparent; 
+  animation: rotateLoader 1s infinite;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1000; 
+}
+
+@keyframes rotateLoader {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+.chat-with-us {
+  padding: 25px;
+  background-color: rgb(242, 242, 242, 0.8);
+  border: none;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+
+.chat {
+  font-size: 25px;
+}
+
+@media (max-width: 500px) {
+
+  header{
+    padding: 0 10px;
+  }
+
+  .logo {
+    font-size: 19px; 
+    margin-left: 0; 
+  }
+
+  .navbar ul {
+    flex-direction: row; 
+  }
+
+  .navbar li {
+    margin-right: 8px; 
+    font-size: 13px;
+  }
+  .navbar li:last-child {
+    margin-right: 0px; 
+  }
+
+  .content {
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .news, .about-the-project {
+    width: 350px; 
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px; 
+    line-height: 1.4; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); 
+  }
+
+  .slideshow-container { 
+    width: 200px; 
+  }
+
+  .mySlides img {
+    height: 300px; 
+    width: 100%; 
+  }
+
+
+  .contact-us{
+    padding-top: 5px;
+  }
+
+  .footer-links {
+    flex-direction: row; 
+    padding: 10px;
+  }
+
+  .footer-icon {
+    font-size: 18px;
+    margin: 0 10px; 
+  }
+
+  .loader {
+    width: 30px; 
+  }
+}
+
+.navbar-button {
+  color: #f2f2f2;;
+  font-size: 22px;
+  padding: 12px;
+  border: none;
+  border-radius: 19px;
+  background-color: #7A5C2E;
+  cursor: pointer;
+}
+
+.navbar-button:hover {
+  background-color:  #a27c42;
+}
+
+
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px 40px;
+  width: 500px;
+  max-width: 90%;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #8a5a38;
+  outline: none;
+}
+
+.open {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e8b57b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 17px;
+  cursor: pointer;
+  font-family: 'Garamond', serif;
+  transition: background-color 0.3s;
+}
+
+.open:hover {
+  background-color: #c78a57;
+}
+
+.close {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  border: none;
+  background-color: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.close:hover {
+  background-color: #ff4d4d;
+}
+
+.modal h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #8a5a38;
+}
+
+.modal h2 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #5a5a5a;
+}
+
+.modal p {
+  opacity: 0.8;
+  font-size: 18px;
+}
