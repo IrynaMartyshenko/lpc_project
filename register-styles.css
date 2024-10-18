@@ -49,7 +49,7 @@ body {
   padding: 15px;
   background-color: #d1a36d; 
   border-radius: 25px; 
-  color: #f2f2f2 ; 
+  color: #f2f2f2; 
   cursor: pointer;
   transition: background-color 0.3s; 
   font-size: 20px;
@@ -90,7 +90,6 @@ body {
   text-decoration: underline; 
 }
 
-
 .home-button-container {
   margin: 20px; 
   text-align: left; 
@@ -114,6 +113,57 @@ body {
   transform: scale(1.05); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
+
+.table-container {
+  position: absolute; 
+  top: 500px; 
+  left: 10px; 
+  width: 700px; 
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 10px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+  overflow: auto; 
+}
+
+#userTable {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+#userTable th, #userTable td {
+  border: 1px solid #ccc; 
+  padding: 8px; 
+  text-align: left; 
+}
+
+#userTable th {
+  background-color: #d1a36d; 
+  color: #fff; 
+}
+
+button {
+  margin-top: 10px; 
+  background-color: #d1a36d; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  padding: 5px 10px; 
+  cursor: pointer; 
+}
+
+button:hover {
+  background-color: #b88f60; 
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
 
 @media (max-width: 500px) {
   .registration-page {

@@ -10,8 +10,8 @@
   <div class="home-button-container">
     <button class="back-to-mainp" onclick="window.location.href='index.html'">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-      <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-      <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+        <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+        <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
       </svg>
     </button>
   </div>
@@ -22,33 +22,42 @@
       <form action="#" id="registrationForm">
         <div class="registration-form">
           <label class="registration-label">Name</label>
-          <input type="text" class="input-info" placeholder="Enter Your Name">
+          <input type="text" class="input-info" placeholder="Enter Your Name" id="nameInput">
+          <div class="error-message" id="nameError"></div>
           
           <label class="registration-label">Surname</label>
-          <input type="text" class="input-info" placeholder="Enter Your Surname">
-          
+          <input type="text" class="input-info" placeholder="Enter Your Surname" id="surnameInput">
+          <div class="error-message" id="surnameError"></div>
+
           <label class="registration-label">Birthday Date</label>
-          <input type="date" class="input-info">
-          
+          <input type="date" class="input-info" id="birthdayInput">
+          <div class="error-message" id="birthdayError"></div>
+
+          <label class="registration-label">Phone Number</label>
+          <input type="tel" class="input-info" placeholder="+38(0__) ___-__-__" id="phoneInput">
+          <div class="error-message" id="phoneError"></div>
+
           <label class="registration-label">Email</label>
-          <input type="email" class="input-info" placeholder="Enter Your Email">
+          <input type="email" class="input-info" placeholder="Enter Your Email" id="emailInput">
+          <div class="error-message" id="emailError"></div>
 
           <label class="registration-label">Password</label>
-          <input type="password" class="input-info" placeholder="Create Your Password">
-          
-          <label class="registration-label"> Sex</label>
+          <input type="password" class="input-info" placeholder="Create Your Password" id="passwordInput">
+          <div class="error-message" id="passwordError"></div>
+
+          <label class="registration-label">Sex</label>
           <label>
-            <input type="radio" name="gender" value="male" required>
+            <input type="radio" name="gender" value="male" id="maleInput">
             Male
           </label>
           <label>
-            <input type="radio" name="gender" value="female">
+            <input type="radio" name="gender" value="female" id="femaleInput">
             Female
           </label>
-
+          <div class="error-message" id="genderError"></div>
 
           <label class="registration-label">Group</label>
-          <select class="input-info">
+          <select class="input-info" id="groupInput">
             <option value="">Choose a group</option>
             <option value="IA-31">IA-31</option>
             <option value="IA-32">IA-32</option>
@@ -56,10 +65,8 @@
             <option value="IA-34">IA-34</option>
             <option value="IA-35">IA-35</option>
           </select>
-          
-          <label class="registration-label">Upload File</label>
-          <input type="file" accept=".pdf, .doc,.docx" class="input-info">
-          
+          <div class="error-message" id="groupError"></div>
+
           <button type="submit" class="submit-button" onclick="validateForm(event)">Sign Up</button>
         </div>
       </form>
@@ -70,6 +77,29 @@
     </div>
   </div>
 
+  <div class="table-container">
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Birthday Date</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Phone</th>
+          <th>Sex</th>
+          <th>Group</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="deleteSelectedRows()">Delete Selected</button>
+    <button onclick="duplicateSelectedRows()">Duplicate Selected</button>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/dependencyLibs/inputmask.dependencyLib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
   <script src="register.js"></script>
 </body>
 </html>
