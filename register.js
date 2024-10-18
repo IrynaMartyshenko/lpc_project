@@ -37,12 +37,15 @@ function validateForm(event) {
   }
 
   if (!birthdayInput.value) {
-    showError('birthdayError', 'Birthday date is required');
+    showError('birthdayError', 'Birthday is required');
+    isValid = false;
+  } else if (new Date(birthdayInput.value) > new Date()) {
+    showError('birthdayError', 'Birthday cannot be in the future');
     isValid = false;
   } else {
     hideError('birthdayError');
   }
-
+  
   if (!emailInput.value || !validateEmail(emailInput.value)) {
     showError('emailError', 'Valid email is required (e.g., gmail.com or ukr.net)');
     isValid = false;
@@ -53,9 +56,22 @@ function validateForm(event) {
   if (!passwordInput.value) {
     showError('passwordError', 'Password is required');
     isValid = false;
+  } else if (passwordInput.value.length < 8) {
+    showError('passwordError', 'Password must be at least 8 characters long');
+    isValid = false;
+  } else if (!/[a-z]/.test(passwordInput.value)) {
+    showError('passwordError', 'Password must contain at least one lowercase letter');
+    isValid = false;
+  } else if (!/[A-Z]/.test(passwordInput.value)) {
+    showError('passwordError', 'Password must contain at least one uppercase letter');
+    isValid = false;
+  } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(passwordInput.value)) {
+    showError('passwordError', 'Password must contain at least one special symbol');
+    isValid = false;
   } else {
     hideError('passwordError');
   }
+  
 
   if (!phoneInput.value) {
     showError('phoneError', 'Phone number is required');
